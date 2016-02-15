@@ -4,7 +4,7 @@
 #
 Name     : jsonpath-rw-ext
 Version  : 0.3.0
-Release  : 4
+Release  : 5
 URL      : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-0.3.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-0.3.0.tar.gz
 Summary  : Extensions for JSONPath RW
