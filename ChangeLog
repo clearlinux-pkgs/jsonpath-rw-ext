@@ -1,13 +1,20 @@
 CHANGES
 =======
 
+1.0.0
+-----
+
+* Fix pep8
+* Make results of a sort indexable and traversable
+* Added support for floating point types in filter predicates
+
 0.3.0
 -----
 
 * Fix error when the filtered datum is not iterable
 
-0.2.0
------
+0.2
+---
 
 * Set minimum version of jsonpath-rw
 * Fix reference to jsonpath-rw
