@@ -4,7 +4,7 @@
 #
 Name     : jsonpath-rw-ext
 Version  : 1.0.0
-Release  : 7
+Release  : 8
 URL      : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 Summary  : Extensions for JSONPath RW
@@ -12,10 +12,12 @@ Group    : Development/Tools
 License  : Apache-2.0
 Requires: jsonpath-rw-ext-python
 BuildRequires : Babel-python
+BuildRequires : Jinja2
 BuildRequires : Sphinx-python
 BuildRequires : coverage-python
 BuildRequires : decorator-python
 BuildRequires : discover-python
+BuildRequires : docutils
 BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : hacking

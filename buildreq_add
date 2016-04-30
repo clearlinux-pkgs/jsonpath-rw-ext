@@ -24,3 +24,5 @@ python-mimeparse-python
 extras-python
 extras
 testrepository
+docutils
+Jinja2
