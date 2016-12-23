@@ -4,7 +4,7 @@
 #
 Name     : jsonpath-rw-ext
 Version  : 1.0.0
-Release  : 14
+Release  : 15
 URL      : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 Summary  : Extensions for JSONPath RW
@@ -21,6 +21,7 @@ BuildRequires : docutils
 BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : hacking
+BuildRequires : imagesize-python
 BuildRequires : jsonpath-rw-python
 BuildRequires : oslosphinx-python
 BuildRequires : oslotest-python
@@ -62,6 +63,7 @@ python components for the jsonpath-rw-ext package.
 %setup -q -n jsonpath-rw-ext-1.0.0
 
 %build
+export LANG=C
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
