@@ -11,7 +11,7 @@ testtools
 testtools-python
 testscenarios
 testrepository-python
-oslotest-python
+oslotest
 oslosphinx-python
 Sphinx-python
 python-subunit-python
