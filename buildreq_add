@@ -1,28 +1,2 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-jsonpath-rw-python
-Babel-python
-six-python
-six
-decorator-python
-ply-python
-pytz-python
-testtools
-testtools-python
-testscenarios
-testrepository-python
-oslotest
-oslosphinx-python
-Sphinx-python
-python-subunit-python
-discover-python
-coverage-python
-hacking
-traceback2-python
-unittest2-python
-python-mimeparse-python
-extras-python
-extras
-testrepository
-docutils
-Jinja2

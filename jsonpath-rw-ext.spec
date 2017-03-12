@@ -6,7 +6,7 @@
 #
 Name     : jsonpath-rw-ext
 Version  : 1.0.0
-Release  : 16
+Release  : 17
 URL      : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 Source99 : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz.asc
@@ -17,38 +17,12 @@ Requires: jsonpath-rw-ext-python
 Requires: Babel
 Requires: jsonpath-rw
 Requires: pbr
-BuildRequires : Babel-python
-BuildRequires : Jinja2
-BuildRequires : Sphinx-python
 BuildRequires : configparser-python
-BuildRequires : coverage-python
-BuildRequires : decorator-python
-BuildRequires : discover-python
-BuildRequires : docutils
-BuildRequires : extras
-BuildRequires : extras-python
-BuildRequires : hacking
-BuildRequires : jsonpath-rw-python
-BuildRequires : oslosphinx-python
-BuildRequires : oslotest
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : ply-python
 BuildRequires : python-dev
-BuildRequires : python-mimeparse-python
-BuildRequires : python-subunit-python
 BuildRequires : python3-dev
-BuildRequires : pytz-python
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
-BuildRequires : testrepository
-BuildRequires : testrepository-python
-BuildRequires : testscenarios
-BuildRequires : testtools
-BuildRequires : testtools-python
-BuildRequires : traceback2-python
-BuildRequires : unittest2-python
 
 %description
 ===============================
@@ -68,12 +42,12 @@ python components for the jsonpath-rw-ext package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489023747
+export SOURCE_DATE_EPOCH=1489281563
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1489023747
+export SOURCE_DATE_EPOCH=1489281563
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
