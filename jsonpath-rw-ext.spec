@@ -6,7 +6,7 @@
 #
 Name     : jsonpath-rw-ext
 Version  : 1.0.0
-Release  : 17
+Release  : 18
 URL      : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 Source99 : https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz.asc
