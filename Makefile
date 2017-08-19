@@ -1,5 +1,5 @@
 PKG_NAME := jsonpath-rw-ext
-URL := https://pypi.python.org/packages/source/j/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
+URL := http://pypi.debian.net/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 
 
 include ../common/Makefile.common
