@@ -6,35 +6,50 @@
 #
 Name     : jsonpath-rw-ext
 Version  : 1.0.0
-Release  : 19
+Release  : 20
 URL      : http://pypi.debian.net/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 Source0  : http://pypi.debian.net/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz
 Source99 : http://pypi.debian.net/jsonpath-rw-ext/jsonpath-rw-ext-1.0.0.tar.gz.asc
 Summary  : Extensions for JSONPath RW
 Group    : Development/Tools
 License  : Apache-2.0
+Requires: jsonpath-rw-ext-python3
+Requires: jsonpath-rw-ext-license
 Requires: jsonpath-rw-ext-python
 Requires: Babel
 Requires: jsonpath-rw
 Requires: pbr
-BuildRequires : configparser-python
-BuildRequires : enum34-python
+BuildRequires : buildreq-distutils3
 BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python-dev
-BuildRequires : python3-dev
-BuildRequires : setuptools
 
 %description
 python-jsonpath-rw-ext
         ===============================
 
+%package license
+Summary: license components for the jsonpath-rw-ext package.
+Group: Default
+
+%description license
+license components for the jsonpath-rw-ext package.
+
+
 %package python
 Summary: python components for the jsonpath-rw-ext package.
 Group: Default
+Requires: jsonpath-rw-ext-python3
 
 %description python
 python components for the jsonpath-rw-ext package.
+
+
+%package python3
+Summary: python3 components for the jsonpath-rw-ext package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the jsonpath-rw-ext package.
 
 
 %prep
@@ -45,15 +60,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1503153809
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1535065788
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1503153809
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+mkdir -p %{buildroot}/usr/share/doc/jsonpath-rw-ext
+cp LICENSE %{buildroot}/usr/share/doc/jsonpath-rw-ext/LICENSE
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -61,7 +75,13 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/jsonpath-rw-ext/LICENSE
+
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python2*/*
+
+%files python3
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
